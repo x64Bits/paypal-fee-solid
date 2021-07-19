@@ -1,0 +1,96 @@
+body {
+  background-color: #090043;
+}
+
+textarea:focus,
+input:focus {
+  outline: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.indicator-on {
+  transform: translateX(158%);
+  animation-name: indicatorOn;
+}
+
+.indicator-off {
+  transform: translateX(18%);
+  animation-name: indicatorOff;
+}
+
+@keyframes indicatorOn {
+  from {
+    transform: translateX(18%);
+  }
+
+  to {
+    transform: translateX(158%);
+  }
+}
+
+@keyframes indicatorOff {
+  from {
+    transform: translateX(158%);
+  }
+
+  to {
+    transform: translateX(18%);
+  }
+}
+
+/* Result animations */
+
+@keyframes hidePrev {
+  from {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-80%);
+    opacity: 0;
+  }
+}
+
+@keyframes showResult {
+  from {
+    transform: translateY(-80%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.prev-animation {
+  position: absolute;
+  animation-name: hidePrev;
+  animation-duration: 0.35s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.prev-hide {
+  display: none;
+}
+
+.result-animation {
+  position: absolute;
+  animation-name: showResult;
+  animation-duration: 0.35s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}

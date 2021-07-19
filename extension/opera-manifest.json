@@ -1,0 +1,29 @@
+{
+  "name": "PayPal Fee Calculator",
+  "version": "0.2.0",
+  "manifest_version": 2,
+  "description": "A most simple and beautiful PayPal fee calculator",
+
+  "permissions": ["https://*.paypal.com/*"],
+
+  "developer": {
+    "name": "Ignacio Zsabo",
+    "url": "http://zsabo.dev"
+  },
+
+  "browser_action": {
+    "default_icon": {
+      "16": "extension/icon-16.png",
+      "48": "extension/icon-48.png",
+      "128": "extension/icon-128.png"
+    },
+    "default_title": "Open PayPal Fee Calculator",
+    "default_popup": "index.html"
+  },
+
+  "icons": {
+    "16": "extension/icon-16.png",
+    "48": "extension/icon-48.png",
+    "128": "extension/icon-128.png"
+  }
+}

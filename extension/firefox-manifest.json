@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "PayPal Fee Calculator",
+  "version": "0.2.0",
+  "description": "A most simple and beautiful PayPal fee calculator",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "pp-calc@zsabo.dev"
+    }
+  },
+
+  "permissions": ["*://*.paypal.com/*", "webRequest"],
+
+  "browser_action": {
+    "default_icon": "extension/icon-48.png",
+    "default_title": "PayPal Fee Calculator",
+    "default_popup": "index.html"
+  },
+
+  "background": {
+    "page": "index.html"
+  },
+
+  "icons": {
+    "16": "extension/icon-16.png",
+    "32": "extension/icon-32.png",
+    "48": "extension/icon-48.png",
+    "128": "extension/icon-128.png"
+  },
+
+  "author": "Ignacio Zsabo",
+  "developer": {
+    "name": "Ignacio Zsabo",
+    "url": "https://zsabo.dev"
+  }
+}
