@@ -1046,6 +1046,11 @@ solid-styled-components@^0.27.1:
     csstype "^2.6.2"
     goober "^2.0.38"
 
+solidjs-icons@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/solidjs-icons/-/solidjs-icons-0.0.3.tgz#00b054c864d16fe5dc62b5c5e876746c497d4280"
+  integrity sha512-zr4/4Vld+zrKxGIVI5iQLmdQstAVPLumAuFUHrX5Qy83KmPrMs2SINf5RmwyC4R6pNW3Unb8TozHYVSogWijRg==
+
 source-map-js@^0.6.2:
   version "0.6.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-0.6.2.tgz#0bb5de631b41cfbda6cfba8bd05a80efdfd2385e"

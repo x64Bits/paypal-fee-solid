@@ -1,5 +1,4 @@
-import Icon from "../../../../solid-icons/lib/Icon";
-import FiSettings from "../../../../solid-icons/lib/fi/FiSettings";
+import FiSettings from "solidjs-icons/fi/FiSettings";
 import { Logo, LogoPayPal } from "./constants";
 import {
   BrandContainer,
@@ -23,7 +22,7 @@ export default function Header() {
           <PayPalImg src={LogoPayPal} />
         </BrandContainer>
         <SettingsButton onClick={handleOpenSettings}>
-          <Icon src={FiSettings} color="#FFF" size="2rem" />
+          <FiSettings color="#FFF" size="2rem" />
         </SettingsButton>
       </HeaderContainer>
       <Description>

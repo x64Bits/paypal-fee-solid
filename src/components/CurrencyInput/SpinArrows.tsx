@@ -1,6 +1,5 @@
-import Icon from "../../../../solid-icons/lib/Icon";
-import BiChevronUp from "../../../../solid-icons/lib/bi/BiChevronUp";
-import BiChevronDown from "../../../../solid-icons/lib/bi/BiChevronDown";
+import FiChevronUp from "solidjs-icons/fi/FiChevronUp";
+import FiChevronDown from "solidjs-icons/fi/FiChevronDown";
 import { ArrowsContainer, ArrowStyle } from "./styles";
 
 export default function SpinArrows(props) {
@@ -24,13 +23,13 @@ export default function SpinArrows(props) {
 
   return (
     <ArrowsContainer>
-      <Icon
-        src={BiChevronUp}
+      <FiChevronUp
+        size="1rem"
         onClick={handleSpinUpValue}
         className={ArrowStyle}
       />
-      <Icon
-        src={BiChevronDown}
+      <FiChevronDown
+        size="1rem"
         onClick={handleSpinDownValue}
         className={ArrowStyle}
       />
