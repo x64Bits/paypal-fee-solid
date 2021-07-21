@@ -45,6 +45,7 @@ export const ArrowsContainer = styled("div")`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0.4rem 0;
 `;
 
 export const ArrowStyle = css`

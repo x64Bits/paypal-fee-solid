@@ -1,4 +1,3 @@
-import { createEffect } from "solid-js";
 import { typeLabels } from "./constants";
 import {
   TypeLabel,

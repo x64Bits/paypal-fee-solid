@@ -1,11 +1,9 @@
 import { createEffect, createSignal, Show } from "solid-js";
-import { JSX } from "solid-js/jsx-runtime";
 
 import { Container } from "./styles";
 import Separator from "../components/common/Separator";
 import CurrencyInput from "../components/CurrencyInput";
 import CurrencyOutput from "../components/CurrencyOutput";
-
 import Header from "../components/Header";
 import TypeSwitch from "../components/TypeSwitch";
 
@@ -16,7 +14,7 @@ interface Payload {
   commission: string | number;
 }
 
-function App(): JSX.Element {
+function App() {
   const [sendType, setSendType] = createSignal(false);
   const [value, setValue] = createSignal(0);
   const [result, setResult] = createSignal();
@@ -43,6 +41,7 @@ function App(): JSX.Element {
       <TypeSwitch active={sendType()} handleSwitch={setSendType} />
       <Separator />
       <CurrencyInput currentValue={value()} setValue={setValue} />
+
       <Show when={result() && commission()}>
         <CurrencyOutput
           prevResult={prevResult()}

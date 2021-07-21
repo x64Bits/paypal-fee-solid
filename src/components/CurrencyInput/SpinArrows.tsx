@@ -23,16 +23,12 @@ export default function SpinArrows(props) {
 
   return (
     <ArrowsContainer>
-      <FiChevronUp
-        size="1rem"
-        onClick={handleSpinUpValue}
-        className={ArrowStyle}
-      />
-      <FiChevronDown
-        size="1rem"
-        onClick={handleSpinDownValue}
-        className={ArrowStyle}
-      />
+      <div onClick={handleSpinUpValue} className={ArrowStyle}>
+        <FiChevronUp size="1rem" className={ArrowStyle} />
+      </div>
+      <div onClick={handleSpinDownValue} className={ArrowStyle}>
+        <FiChevronDown size="1rem" />
+      </div>
     </ArrowsContainer>
   );
 }
