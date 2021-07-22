@@ -55,7 +55,7 @@ options:
 
 ## Get it like browser extension:
 
-[![Chrome](https://user-images.githubusercontent.com/25030238/126597106-3063db05-3f19-42bd-aa5f-ee1cb1292281.png)](https://user-images.githubusercontent.com/25030238/126597106-3063db05-3f19-42bd-aa5f-ee1cb1292281.png)
+[![Chrome](https://user-images.githubusercontent.com/25030238/126597106-3063db05-3f19-42bd-aa5f-ee1cb1292281.png)](https://chrome.google.com/webstore/detail/paypal-fee-calculator/ggeedejppnnohhoamecllikpjeakkhca?hl=es&authuser=0)
 
 [![Opera](https://user-images.githubusercontent.com/25030238/115462259-6f86d200-a1f8-11eb-8e28-2cdc8ff4ee35.png)](https://addons.opera.com/es/extensions/details/paypal-fee-calculator/)
 
