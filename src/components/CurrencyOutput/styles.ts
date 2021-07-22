@@ -7,6 +7,7 @@ export const OutputContainer = styled("div")`
   flex-direction: column;
   width: 100%;
   text-align: center;
+  position: relative;
 `;
 
 export const OutputLabel = styled("span")`
@@ -55,4 +56,27 @@ export const PrevResult = styled("div")`
 
 export const CurrentResult = styled("div")`
   user-select: none;
+`;
+
+export const ToastContainer = styled("div")`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: red;
+`;
+
+export const CopyToast = styled("div")`
+  position: absolute;
+  background-color: ${({ theme }) => theme.colors.fieldBg};
+  color: ${({ theme }) => theme.colors.primary};
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: backwards;
+  display: flex;
+  align-self: center;
 `;

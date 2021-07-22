@@ -3,9 +3,8 @@ import { css, styled } from "solid-styled-components";
 export const Container = styled("div")`
   position: absolute;
   height: 100%;
-  min-width: 13vw;
+  min-width: 50%;
   background-color: rgba(9, 6, 37, 1);
-  /* backdrop-filter: blur(5px); */
   top: 0;
   right: 0;
   padding: 1.5rem 1.2rem;
@@ -26,7 +25,7 @@ export const CloseContainer = styled("div")`
 `;
 
 export const DrawerItem = styled("span")`
-  font-size: 1.3em;
+  font-size: 1.5em;
   display: flex;
   align-items: center;
   cursor: pointer;

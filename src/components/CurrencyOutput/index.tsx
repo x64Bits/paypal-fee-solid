@@ -3,6 +3,7 @@ import { createEffect, createSignal } from "solid-js";
 import { formatCurrency } from "@/utils/format-currency";
 
 import {
+  CopyToast,
   CurrentResult,
   OutputCommission,
   OutputContainer,
@@ -11,21 +12,33 @@ import {
   OutputValue,
   OutputValueContainer,
   PrevResult,
+  ToastContainer,
 } from "./styles";
 import { typeResult } from "../TypeSwitch/constants";
+
+const toggleClass = (setter, duration) => {
+  setter((prev) => !prev);
+  setTimeout(() => {
+    setter((prev) => !prev);
+  }, duration);
+};
 
 export default function CurrencyOutput(props) {
   const percentage = localStorage.getItem("percentage");
   const [resetClass, setResetClass] = createSignal(false);
+  const [toastShow, setToastShow] = createSignal(false);
 
   createEffect(() => {
     if (props.prevResult) {
-      setResetClass(true);
-      setTimeout(() => {
-        setResetClass(false);
-      }, 350);
+      toggleClass(setResetClass, 350);
     }
   });
+
+  function handleCopy() {
+    const currency = props.result;
+    navigator.clipboard.writeText(currency);
+    toggleClass(setToastShow, 2000);
+  }
 
   return (
     <OutputContainer>
@@ -35,7 +48,9 @@ export default function CurrencyOutput(props) {
           <OutputValue>{formatCurrency(props.prevResult)}</OutputValue>
         </PrevResult>
         <CurrentResult className={resetClass() ? "result-animation" : ""}>
-          <OutputValue>{formatCurrency(props.result)}</OutputValue>
+          <OutputValue onClick={handleCopy}>
+            {formatCurrency(props.result)}
+          </OutputValue>
         </CurrentResult>
       </OutputValueContainer>
       <OutputDescription>
@@ -43,6 +58,10 @@ export default function CurrencyOutput(props) {
         <OutputCommission>${formatCurrency(props.commission)}</OutputCommission>
         USD (${percentage}% + $0.30)
       </OutputDescription>
+      <CopyToast className={toastShow() ? "toast-open" : "toast-hide"}>
+        <b style={{ "margin-right": "0.3rem" }}>${props.result}</b> han sido
+        copiados
+      </CopyToast>
     </OutputContainer>
   );
 }

@@ -1,12 +1,19 @@
 import { createSignal, onMount, Show, Switch } from "solid-js";
-import { Router, pathIntegration, MatchRoute } from "@rturnq/solid-router";
+import {
+  Router,
+  pathIntegration,
+  MatchRoute,
+  historyIntegration,
+} from "@rturnq/solid-router";
 
 import Home from "./home";
 import Settings from "./settings";
 import { Container } from "./styles";
 import Drawer from "@/components/Drawer";
+import { createMemoryHistory } from "history";
 
 function App() {
+  const history = createMemoryHistory();
   const [openDrawer, setOpenDrawer] = createSignal(false);
 
   onMount(() => {
@@ -18,7 +25,7 @@ function App() {
 
   return (
     <Container>
-      <Router integration={pathIntegration()}>
+      <Router integration={historyIntegration(history)}>
         <Switch fallback={<h1>404</h1>}>
           <MatchRoute end>
             <Home onOpenDrawer={setOpenDrawer} />
