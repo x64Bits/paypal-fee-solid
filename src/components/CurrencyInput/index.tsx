@@ -1,4 +1,5 @@
 import { onMount } from "solid-js";
+import { typeQuantity } from "../TypeSwitch/constants";
 import SpinArrows from "./SpinArrows";
 import {
   CurrencySymbol,
@@ -23,7 +24,7 @@ export default function CurrencyInput(props) {
 
   return (
     <FormGroup>
-      <Label>Cantidad que desea Recibir :</Label>
+      <Label>{typeQuantity[props.type]}</Label>
       <InputContainer>
         <CurrencySymbol>$</CurrencySymbol>
         <Field

@@ -47,10 +47,15 @@ function Home(props): JSX.Element {
       <Separator />
       <TypeSwitch active={sendType()} handleSwitch={setSendType} />
       <Separator />
-      <CurrencyInput currentValue={value()} setValue={setValue} />
+      <CurrencyInput
+        currentValue={value()}
+        setValue={setValue}
+        type={sendType()}
+      />
 
       <Show when={result() && commission()}>
         <CurrencyOutput
+          type={sendType()}
           prevResult={prevResult()}
           result={result()}
           commission={commission()}

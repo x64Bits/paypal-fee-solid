@@ -12,6 +12,7 @@ import {
   OutputValueContainer,
   PrevResult,
 } from "./styles";
+import { typeResult } from "../TypeSwitch/constants";
 
 export default function CurrencyOutput(props) {
   const percentage = localStorage.getItem("percentage");
@@ -28,7 +29,7 @@ export default function CurrencyOutput(props) {
 
   return (
     <OutputContainer>
-      <OutputLabel>Es necesario enviar:</OutputLabel>
+      <OutputLabel>{typeResult[props.type]}</OutputLabel>
       <OutputValueContainer>
         <PrevResult className={resetClass() ? "prev-animation" : "prev-hide"}>
           <OutputValue>{formatCurrency(props.prevResult)}</OutputValue>
