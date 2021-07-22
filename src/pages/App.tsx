@@ -1,13 +1,13 @@
 import { createEffect, createSignal, Show } from "solid-js";
 
 import { Container } from "./styles";
-import Separator from "../components/common/Separator";
-import CurrencyInput from "../components/CurrencyInput";
-import CurrencyOutput from "../components/CurrencyOutput";
-import Header from "../components/Header";
-import TypeSwitch from "../components/TypeSwitch";
+import Separator from "@/components/common/Separator";
+import CurrencyInput from "@/components/CurrencyInput";
+import CurrencyOutput from "@/components/CurrencyOutput";
+import Header from "@/components/Header";
+import TypeSwitch from "@/components/TypeSwitch";
 
-import { getCalculatedResult } from "../utils/calculate-result";
+import { getCalculatedResult } from "@/utils/calculate-result";
 
 interface Payload {
   result: string | number;

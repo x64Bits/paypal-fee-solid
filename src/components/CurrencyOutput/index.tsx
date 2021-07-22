@@ -1,5 +1,6 @@
 import { createEffect, createSignal } from "solid-js";
-import { formatCurrency } from "../../utils/format-currency";
+
+import { formatCurrency } from "@/utils/format-currency";
 
 import {
   CurrentResult,
