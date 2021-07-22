@@ -17,7 +17,11 @@ export default function TypeSwitch(props) {
       <TypeLabel>
         Tipo de conversión: <TypeValue> {typeLabels[props.active]}</TypeValue>
       </TypeLabel>
-      <SwitchContainer active={props.active} onClick={handleSwitchType}>
+      <SwitchContainer
+        active={props.active}
+        onClick={handleSwitchType}
+        aria-label="Switch operation type"
+      >
         <SwitchIndicator
           active={props.active}
           className={props.active ? "indicator-on" : "indicator-off"}

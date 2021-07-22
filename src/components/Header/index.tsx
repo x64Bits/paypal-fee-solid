@@ -17,10 +17,10 @@ export default function Header(props) {
     <>
       <HeaderContainer>
         <BrandContainer>
-          <BrandLogo src={Logo} />
-          <PayPalImg src={LogoPayPal} />
+          <BrandLogo src={Logo} alt="PayPal Fee calculator logo" />
+          <PayPalImg src={LogoPayPal} alt="PayPal logo" />
         </BrandContainer>
-        <SettingsButton onClick={handleOpenSettings}>
+        <SettingsButton onClick={handleOpenSettings} aria-label="Show menu">
           <AiOutlineMenu color="#FFF" size="2rem" />
         </SettingsButton>
       </HeaderContainer>
