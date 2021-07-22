@@ -29,8 +29,3 @@ export const SettingsButton = styled("button")`
   border-width: 0;
   cursor: pointer;
 `;
-
-export const Description = styled("p")`
-  font-size: 16px;
-  margin-top: 1rem;
-`;

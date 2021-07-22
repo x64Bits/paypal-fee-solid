@@ -14,6 +14,7 @@ import {
 } from "./styles";
 
 export default function CurrencyOutput(props) {
+  const percentage = localStorage.getItem("percentage");
   const [resetClass, setResetClass] = createSignal(false);
 
   createEffect(() => {
@@ -39,7 +40,7 @@ export default function CurrencyOutput(props) {
       <OutputDescription>
         Comisión de{" "}
         <OutputCommission>${formatCurrency(props.commission)}</OutputCommission>
-        USD (5.4% + $0.30)
+        USD (${percentage}% + $0.30)
       </OutputDescription>
     </OutputContainer>
   );

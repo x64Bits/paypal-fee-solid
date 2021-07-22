@@ -1,54 +1,36 @@
-import { createEffect, createSignal, Show } from "solid-js";
+import { createSignal, onMount, Show, Switch } from "solid-js";
+import { Router, pathIntegration, MatchRoute } from "@rturnq/solid-router";
 
+import Home from "./home";
+import Settings from "./settings";
 import { Container } from "./styles";
-import Separator from "@/components/common/Separator";
-import CurrencyInput from "@/components/CurrencyInput";
-import CurrencyOutput from "@/components/CurrencyOutput";
-import Header from "@/components/Header";
-import TypeSwitch from "@/components/TypeSwitch";
-
-import { getCalculatedResult } from "@/utils/calculate-result";
-
-interface Payload {
-  result: string | number;
-  commission: string | number;
-}
+import Drawer from "@/components/Drawer";
 
 function App() {
-  const [sendType, setSendType] = createSignal(false);
-  const [value, setValue] = createSignal(0);
-  const [result, setResult] = createSignal();
-  const [commission, setCommission] = createSignal();
-  const [prevResult, setPrevResult] = createSignal();
+  const [openDrawer, setOpenDrawer] = createSignal(false);
 
-  createEffect(() => {
-    const payload: Payload = getCalculatedResult({
-      value: value(),
-      type: sendType(),
-    });
-
-    setResult((prev) => {
-      setPrevResult(String(prev));
-      return payload.result;
-    });
-    setCommission(String(payload.commission));
+  onMount(() => {
+    const percentage = localStorage.getItem("percentage");
+    if (!percentage) {
+      localStorage.setItem("percentage", String(5.4));
+    }
   });
 
   return (
     <Container>
-      <Header />
-      <Separator />
-      <TypeSwitch active={sendType()} handleSwitch={setSendType} />
-      <Separator />
-      <CurrencyInput currentValue={value()} setValue={setValue} />
-
-      <Show when={result() && commission()}>
-        <CurrencyOutput
-          prevResult={prevResult()}
-          result={result()}
-          commission={commission()}
-        />
-      </Show>
+      <Router integration={pathIntegration()}>
+        <Switch fallback={<h1>404</h1>}>
+          <MatchRoute end>
+            <Home onOpenDrawer={setOpenDrawer} />
+          </MatchRoute>
+          <MatchRoute path="settings">
+            <Settings onOpenDrawer={setOpenDrawer} />
+          </MatchRoute>
+        </Switch>
+        <Show when={openDrawer()}>
+          <Drawer onClose={setOpenDrawer} />
+        </Show>
+      </Router>
     </Container>
   );
 }

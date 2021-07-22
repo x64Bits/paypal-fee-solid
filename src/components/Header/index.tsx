@@ -1,17 +1,16 @@
-import FiSettings from "solidjs-icons/fi/FiSettings";
+import AiOutlineMenu from "solid-icons/ai/AiOutlineMenu";
 import { Logo, LogoPayPal } from "./constants";
 import {
   BrandContainer,
   BrandLogo,
-  Description,
   HeaderContainer,
   PayPalImg,
   SettingsButton,
 } from "./styles";
 
-export default function Header() {
+export default function Header(props) {
   const handleOpenSettings = () => {
-    console.log("navigate to settings screen");
+    props.onOpenDrawer(true);
   };
 
   return (
@@ -22,12 +21,9 @@ export default function Header() {
           <PayPalImg src={LogoPayPal} />
         </BrandContainer>
         <SettingsButton onClick={handleOpenSettings}>
-          <FiSettings color="#FFF" size="2rem" />
+          <AiOutlineMenu color="#FFF" size="2rem" />
         </SettingsButton>
       </HeaderContainer>
-      <Description>
-        Calculadora de comisiones de <b>PayPal</b>
-      </Description>
     </>
   );
 }

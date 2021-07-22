@@ -17,10 +17,12 @@
     "vite-plugin-solid": "^2.0.0"
   },
   "dependencies": {
+    "@rturnq/solid-router": "^0.3.0",
     "@types/node": "^16.3.2",
+    "history": "^5.0.0",
     "path": "^0.12.7",
+    "solid-icons": "^0.0.3",
     "solid-js": "^1.0.0",
-    "solid-styled-components": "^0.27.1",
-    "solidjs-icons": "^0.0.3"
+    "solid-styled-components": "^0.27.1"
   }
 }

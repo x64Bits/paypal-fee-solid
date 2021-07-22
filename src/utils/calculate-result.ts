@@ -1,14 +1,21 @@
+import { createEffect, createSignal } from "solid-js";
+
 const paypalFee = 0.3;
 
-export const percentage = 5.4;
-
 function getCalculatedResult(props) {
-  const paypalCommission = Number(percentage);
+  const savePercentage = localStorage.getItem("percentage");
+  const [paypalCommission, setPaypalCommission] = createSignal(savePercentage);
+
+  createEffect(() => {
+    if (savePercentage) {
+      setPaypalCommission(savePercentage);
+    }
+  });
 
   function getResult(value) {
     const crrValue = parseFloat(value);
     return parseFloat(
-      (100 * (paypalFee + crrValue)) / (0 - paypalCommission + 100)
+      (100 * (paypalFee + crrValue)) / (0 - paypalCommission() + 100)
     ).toFixed(2);
   }
 
@@ -26,9 +33,9 @@ function getCalculatedResult(props) {
 
   function getReceiveCommission(value) {
     const crrValue = parseFloat(value);
-    return parseFloat((paypalCommission / 100) * crrValue + paypalFee).toFixed(
-      2
-    );
+    return parseFloat(
+      (paypalCommission() / 100) * crrValue + paypalFee
+    ).toFixed(2);
   }
 
   function toSend(value) {

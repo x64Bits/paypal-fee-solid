@@ -3,6 +3,8 @@ import { styled } from "solid-styled-components";
 const isDev = !import.meta.env.PROD;
 
 export const Container = styled("main")`
+  position: relative;
+  overflow: hidden;
   background-color: ${({ theme }) => theme.colors.bg};
   font-family: "Roboto", "Helvetica Neue", Helvetica, sans-serif, Arial !important;
   min-width: 380px;

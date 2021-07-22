@@ -1,5 +1,5 @@
-import FiChevronUp from "solidjs-icons/fi/FiChevronUp";
-import FiChevronDown from "solidjs-icons/fi/FiChevronDown";
+import FiChevronUp from "solid-icons/fi/FiChevronUp";
+import FiChevronDown from "solid-icons/fi/FiChevronDown";
 import { ArrowsContainer, ArrowStyle } from "./styles";
 
 export default function SpinArrows(props) {
