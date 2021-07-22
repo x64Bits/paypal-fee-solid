@@ -64,7 +64,6 @@ inquirer
       const sourceDir = `${manifestSrc}icons`;
       const assetsDir = `${distFolder}extension`;
 
-      console.log({ from: sourceDir, to: assetsDir });
       if (!fs.existsSync(assetsDir)) {
         fs.mkdir(assetsDir, function () {
           fse.copy(sourceDir, assetsDir, function (err) {
