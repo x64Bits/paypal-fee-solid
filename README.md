@@ -38,15 +38,24 @@ yarn dev
 yarn build
 ```
 
-The above command generates a file **extension.zip** in the root of the project which can be loaded into firefox to use as a plugin
+The above command generates a file **extension.zip** in the root of the project which can be loaded into firefox to use as a plugin or generate an extension file for chrome in the `dist` folder
 
-- Generate static extension without compiling the project again.
+- This command will build the bundle again and add the extension files.
+- During execution it will ask for which browser you want to generate the extension.
 
 ```bash
 yarn generate
 ```
 
+options:
+
+- `firefox`
+- `chrome`
+- `opera`
+
 ## Get it like browser extension:
+
+[![Chrome](https://user-images.githubusercontent.com/25030238/126597106-3063db05-3f19-42bd-aa5f-ee1cb1292281.png)](https://user-images.githubusercontent.com/25030238/126597106-3063db05-3f19-42bd-aa5f-ee1cb1292281.png)
 
 [![Opera](https://user-images.githubusercontent.com/25030238/115462259-6f86d200-a1f8-11eb-8e28-2cdc8ff4ee35.png)](https://addons.opera.com/es/extensions/details/paypal-fee-calculator/)
 
