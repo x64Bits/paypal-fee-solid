@@ -128,5 +128,5 @@ input[type="number"] {
 
 .toast-hide {
   animation-name: none;
-  display: none;
+  display: none !important;
 }
