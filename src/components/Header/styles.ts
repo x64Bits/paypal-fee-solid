@@ -28,4 +28,5 @@ export const SettingsButton = styled("button")`
   background-color: transparent;
   border-width: 0;
   cursor: pointer;
+  position: relative;
 `;

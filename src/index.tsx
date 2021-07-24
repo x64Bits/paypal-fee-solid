@@ -23,6 +23,8 @@ const theme = {
     separator: "#201b61",
     copy: "rgba(255, 255, 255, 0.2)",
     currency: "rgb(107, 114, 128)",
+    modalBg: "#09032f",
+    modalBorder: "#201a48",
   },
 };
 

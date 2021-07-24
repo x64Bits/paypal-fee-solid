@@ -130,3 +130,21 @@ input[type="number"] {
   animation-name: none;
   display: none !important;
 }
+
+@keyframes showModal {
+  from {
+    transform: scale(50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation-name: showModal;
+  animation-timing-function: ease;
+  animation-duration: 0.35s;
+}

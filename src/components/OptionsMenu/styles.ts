@@ -39,3 +39,16 @@ export const DrawerItem = styled("span")`
 export const DrawerStyle = css`
   margin-left: 0.4rem;
 `;
+
+export const OptionsContainer = styled("div")`
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: ${({ theme }) => theme.colors.modalBg};
+  padding: 1rem 0.8rem;
+  border-radius: 0.5rem;
+  margin-top: 2.1rem;
+  z-index: 2;
+  color: #fff;
+  border: 1px solid ${({ theme }) => theme.colors.modalBorder};
+`;

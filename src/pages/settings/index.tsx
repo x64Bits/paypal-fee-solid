@@ -13,13 +13,9 @@ import {
 import { ButtonBack, ButtonContainer, buttonStyle } from "./styles";
 import { useRouter } from "@rturnq/solid-router";
 
-export default function Settings(props) {
+export default function Settings() {
   const percentage = localStorage.getItem("percentage");
   const router = useRouter();
-
-  function handleOpenDrawer() {
-    props.onOpenDrawer(true);
-  }
 
   function handleSetPercetage(e) {
     const { value } = e.target;
@@ -32,7 +28,7 @@ export default function Settings(props) {
 
   return (
     <>
-      <Header onOpenDrawer={handleOpenDrawer} />
+      <Header />
       <Description>Ajustes</Description>
       <Separator />
       <FormGroup>

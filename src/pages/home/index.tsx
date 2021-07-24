@@ -14,7 +14,7 @@ interface Payload {
   commission: string | number;
 }
 
-function Home(props): JSX.Element {
+function Home(): JSX.Element {
   const [sendType, setSendType] = createSignal(false);
   const [value, setValue] = createSignal(0);
   const [result, setResult] = createSignal();
@@ -34,13 +34,9 @@ function Home(props): JSX.Element {
     setCommission(String(payload.commission));
   });
 
-  function handleOpenDrawer() {
-    props.onOpenDrawer(true);
-  }
-
   return (
     <>
-      <Header onOpenDrawer={handleOpenDrawer} />
+      <Header />
       <Description>
         Calculadora de comisiones de <b>PayPal</b>
       </Description>

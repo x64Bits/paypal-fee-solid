@@ -1,4 +1,6 @@
 import AiOutlineMenu from "solid-icons/ai/AiOutlineMenu";
+import { createSignal } from "solid-js";
+import OptionsMenu from "../OptionsMenu";
 import { Logo, LogoPayPal } from "./constants";
 import {
   BrandContainer,
@@ -9,8 +11,9 @@ import {
 } from "./styles";
 
 export default function Header(props) {
+  const [showOptions, setShowOptions] = createSignal(false);
   const handleOpenSettings = () => {
-    props.onOpenDrawer(true);
+    setShowOptions((prev) => !prev);
   };
 
   return (
@@ -22,6 +25,7 @@ export default function Header(props) {
         </BrandContainer>
         <SettingsButton onClick={handleOpenSettings} aria-label="Show menu">
           <AiOutlineMenu color="#FFF" size="2rem" />
+          <OptionsMenu visible={showOptions()} onClose={setShowOptions} />
         </SettingsButton>
       </HeaderContainer>
     </>
