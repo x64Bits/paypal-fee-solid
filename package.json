@@ -21,7 +21,7 @@
     "@types/node": "^16.3.2",
     "history": "^5.0.0",
     "path": "^0.12.7",
-    "solid-icons": "^0.0.3",
+    "solid-icons": "^0.1.0",
     "solid-js": "^1.0.0",
     "solid-styled-components": "^0.27.1"
   }
