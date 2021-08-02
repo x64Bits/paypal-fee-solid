@@ -37,7 +37,7 @@ export const DrawerItem = styled("span")`
 `;
 
 export const DrawerStyle = css`
-  margin-left: 0.4rem;
+  margin-right: 0.4rem;
 `;
 
 export const OptionsContainer = styled("div")`

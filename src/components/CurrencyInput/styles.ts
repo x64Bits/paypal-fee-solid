@@ -46,6 +46,7 @@ export const ArrowsContainer = styled("div")`
   justify-content: center;
   align-items: center;
   margin: 0.4rem 0;
+  padding-top: 2px;
 `;
 
 export const ArrowStyle = css`

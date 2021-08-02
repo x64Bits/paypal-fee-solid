@@ -1,4 +1,4 @@
-import BsArrowLeft from "solid-icons/bs/BsArrowLeft";
+import { BsArrowLeft } from "solid-icons/bs";
 
 import Separator from "@/components/common/Separator";
 import Header from "@/components/Header";
@@ -40,7 +40,7 @@ export default function Settings() {
       </FormGroup>
       <ButtonContainer>
         <ButtonBack onClick={goHome}>
-          <BsArrowLeft className={buttonStyle} /> <b>Volver</b>
+          <BsArrowLeft color="#FFF" className={buttonStyle} /> <b>Volver</b>
         </ButtonBack>
       </ButtonContainer>
     </>

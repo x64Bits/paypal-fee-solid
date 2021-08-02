@@ -1,4 +1,5 @@
 import { createEffect, createSignal } from "solid-js";
+import { IoCopy } from "solid-icons/io";
 
 import { formatCurrency } from "@/utils/format-currency";
 
@@ -37,7 +38,7 @@ export default function CurrencyOutput(props) {
   function handleCopy() {
     const currency = props.result;
     navigator.clipboard.writeText(currency);
-    toggleClass(setToastShow, 2000);
+    toggleClass(setToastShow, 950);
   }
 
   return (
@@ -59,8 +60,10 @@ export default function CurrencyOutput(props) {
         USD (${percentage}% + $0.30)
       </OutputDescription>
       <CopyToast className={toastShow() ? "toast-open" : "toast-hide"}>
-        <b style={{ "margin-right": "0.3rem" }}>${props.result}</b> han sido
-        copiados
+        <b style={{ "margin-right": "0.3rem" }}>
+          <IoCopy color="#FFF" /> ${props.result}
+        </b>{" "}
+        han sido copiados
       </CopyToast>
     </OutputContainer>
   );

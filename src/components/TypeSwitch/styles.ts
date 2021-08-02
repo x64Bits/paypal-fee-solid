@@ -23,6 +23,7 @@ export const SwitchContainer = styled("button")`
     props.active
       ? props.theme.colors.fieldBorder
       : props.theme.colors.secondary};
+  transition: background-color 350ms;
   width: 56px;
   height: 28px;
   border-radius: 14px;

@@ -1,5 +1,5 @@
-import FiSettings from "solid-icons/fi/FiSettings";
-import AiOutlineHome from "solid-icons/ai/AiOutlineHome";
+import { FiSettings } from "solid-icons/fi";
+import { AiOutlineHome } from "solid-icons/ai";
 
 export const drawerItems = [
   {

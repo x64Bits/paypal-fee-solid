@@ -74,7 +74,7 @@ export const CopyToast = styled("div")`
   color: ${({ theme }) => theme.colors.primary};
   padding: 1rem 2rem;
   border-radius: 12px;
-  animation-duration: 2s;
+  animation-duration: 950ms;
   animation-timing-function: ease-in-out;
   animation-fill-mode: backwards;
   display: flex;

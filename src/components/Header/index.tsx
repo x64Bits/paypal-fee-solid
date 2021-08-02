@@ -1,4 +1,4 @@
-import AiOutlineMenu from "solid-icons/ai/AiOutlineMenu";
+import { AiOutlineMenu } from "solid-icons/ai";
 import { createSignal } from "solid-js";
 import OptionsMenu from "../OptionsMenu";
 import { Logo, LogoPayPal } from "./constants";

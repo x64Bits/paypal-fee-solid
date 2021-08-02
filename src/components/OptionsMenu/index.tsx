@@ -1,4 +1,4 @@
-import { createEffect, createSignal, For, Show } from "solid-js";
+import { createEffect, For, Show } from "solid-js";
 import { useRouter } from "@rturnq/solid-router";
 
 import { DrawerItem, DrawerStyle, OptionsContainer } from "./styles";
@@ -39,8 +39,8 @@ export default function OptionsMenu(props) {
         <For each={drawerItems}>
           {(item) => (
             <DrawerItem onClick={() => handleNavigate(item.route)}>
+              {item.Icon({ className: DrawerStyle, color: "#FFF" })}
               {item.name}
-              {item.Icon({ className: DrawerStyle })}
             </DrawerItem>
           )}
         </For>
