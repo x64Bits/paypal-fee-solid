@@ -1059,10 +1059,10 @@ signal-exit@^3.0.2:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.3.tgz#a1410c2edd8f077b08b4e253c8eacfcaf057461c"
   integrity sha512-VUJ49FC8U1OxwZLxIbTTrDvLnf/6TDgxZcK8wxR8zs13xpx7xbG60ndBlhNrFi2EMuFRoeDoJO7wthSLq42EjA==
 
-solid-icons@^0.1.0:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/solid-icons/-/solid-icons-0.1.1.tgz#cc84b3dfdc60e3f40a40f666455156949d6bb329"
-  integrity sha512-64rprN2ljip7jlhsYpDk9Rr2jjc4fz9cgb2hhkr6nPO3XyJONgdoTA1f6tPhojlKowXaH/nCLzlASOYS2Fa82Q==
+solid-icons@0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/solid-icons/-/solid-icons-0.4.0.tgz#221bbdebfecd011886c120f6f11dcc722553187d"
+  integrity sha512-kc91y+3u/m+UsVQ1+OIHZ+nbxa27zDEIOCCDKzj3uU61QbwWlC4OcGavb2vcDR5PLzS1IwH/JQGZF2u0XEX0UQ==
 
 solid-js@^1.0.0:
   version "1.0.0"

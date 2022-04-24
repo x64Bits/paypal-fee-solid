@@ -1,4 +1,4 @@
-import { AiOutlineMenu } from "solid-icons/ai";
+import { IoMenu } from "solid-icons/io";
 import { createSignal } from "solid-js";
 import OptionsMenu from "../OptionsMenu";
 import { Logo, LogoPayPal } from "./constants";
@@ -24,7 +24,7 @@ export default function Header(props) {
           <PayPalImg src={LogoPayPal} alt="PayPal logo" />
         </BrandContainer>
         <SettingsButton onClick={handleOpenSettings} aria-label="Show menu">
-          <AiOutlineMenu color="#FFF" size="2rem" />
+          <IoMenu color="#FFF" size="2rem" />
           <OptionsMenu visible={showOptions()} onClose={setShowOptions} />
         </SettingsButton>
       </HeaderContainer>
